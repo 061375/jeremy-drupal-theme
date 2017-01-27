@@ -1,0 +1,52 @@
+// _nav.scss
+.hamburger {display: none}
+.main_navigation {
+    .nav-container {
+        background: rgba(0, 0, 0, 0.56);
+        height: 60px;
+        nav {
+            padding: 5px 10px;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    padding: 0;
+                    text-align: right;
+                    float: right;
+                    margin: 30px 2vw;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+        .hamburger {
+            display: none;
+            width: 33px;
+            background: #9B0000;
+            height: 33px;
+            position: absolute;
+            right: 0;
+            margin: 20px;
+            padding: 10px;
+            cursor: pointer;
+            @include noselect;
+            img {
+                width: 100%;
+            }
+            ul {
+                margin: -20px;
+                list-style: none;
+                padding: 0;
+                li {
+                    width: 25px;
+                    height: 3px;
+                    margin: 3px;
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

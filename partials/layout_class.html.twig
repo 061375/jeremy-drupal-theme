@@ -1,0 +1,10 @@
+{# add the page title or home to the container so pages and subpages
+    can more easily have different look and feel using CSS #}
+{% if node.title.value %}
+  {% set pagenow = node.title.value %}
+{% elseif page['#title'] %}
+  {% set pagenow = page['#title'] %}
+{% endif %}
+{% set findstr = ' ' %}
+{% set replacestr = '_' %}
+{% if is_front %}{% set pagenow = 'home' %}{% endif %}

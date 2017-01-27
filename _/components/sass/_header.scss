@@ -1,0 +1,37 @@
+// header.scss
+.main-header {
+    height: 55vh;
+    background: url(../images/desert.c.jpg) no-repeat center center;
+    position: relative;
+    .site_logo {
+        float: left;
+        margin: 9px;
+    }
+    .container {
+        position: absolute;
+        //top: -76px;
+        width: 98vw;
+        bottom: 0;
+        #block-jeremy-branding {
+            $block-jeremy-branding-color: #fff;
+            text-shadow: 2px 2px 5px #000;
+            padding: 10px;
+            font-family: helvetica;
+            font-size: 20px;
+            font-weight: lighter;
+            a {
+                color: $block-jeremy-branding-color; 
+                font-size: 3em;
+                text-decoration: none;
+                letter-spacing: 5px;
+                display: block;
+                &.site_logo {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            color: $block-jeremy-branding-color;
+            //font-size: 2em;
+        }
+    }
+}

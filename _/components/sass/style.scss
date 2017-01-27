@@ -1,0 +1,54 @@
+//
+@import "mixins";
+@import "reset";
+@import "classes";
+
+/* General */
+@import "nav";
+@import "header";
+@import "footer";
+
+/* Templates */
+@import "default";
+@import "home";
+@import "error404";
+
+/* Main Wrapper */
+// basic global styles should be here
+body {
+    background: #f9f6f0;
+    font-family: Verdana;
+}
+.layout-container {
+    width: 80vw;
+    margin: -16px auto;
+    background: #fff;
+    //height: 100vh;
+    padding: 63px 53px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px #989898;
+    color: #928f88;
+    h2 {
+        color: #928f88;
+        font-weight: normal;
+        text-transform: uppercase;
+        a {
+            background: #fff;
+        }
+    }
+    
+    aside {
+        width: 30%;
+        float: right;
+    }
+}
+.layout-content {
+    & > div {
+        width: 60%;
+        float: left;
+    }
+    & > aside {
+        width: 35%;
+        float: left;
+    }
+}

@@ -1,0 +1,67 @@
+<header role="banner" class="main-header">
+  <a href="/" title="Home" rel="home" class="site_logo">
+      <img src="{{ base_path ~ directory }}/logo.svg" alt="Home">
+    </a>
+  <div class="main_navigation">
+    {{ page.primary_menu }}
+  </div>
+  <div class="container">
+   {{ page.header }}
+  </div>
+</header>
+{% include directory ~ '/partials/layout_class.html.twig' %}
+<div class="layout-container {{ pagenow|lower|replace({ (findstr): replacestr }) }}">
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+    {% if page.sidebar %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+  </main>
+  <div style="clear: both"></div>
+</div>{# /.layout-container #}
+<div style="clear: both"></div>
+<footer class="footer" role="contentinfo">
+    <div class="tools">
+      <ul>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/html5.png" alt="html5" />
+        </li>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/css3.png" alt="css3" />
+        </li>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/js.png" alt="javascript" />
+        </li>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/jquery.png" alt="jquery" />
+        </li>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/grunt.png" alt="grunt" />
+        </li>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/sass.png" alt="sass" />
+        </li>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/git.png" alt="git" />
+        </li>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/php.png" alt="php" />
+        </li>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/mysql.png" alt="mysql" />
+        </li>
+        <li>
+          <img src="{{ base_path ~ directory }}/images/tools/apache.png" alt="apache" />
+        </li>
+      </ul> 
+    </div>
+    <div class="copyright">
+      &copy; Copyright 2017 Jeremy Heminger All Rights Reserved - <a href="#">legal</a>
+    </div>
+</footer>

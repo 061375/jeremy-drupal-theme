@@ -1,0 +1,55 @@
+.homepage {
+    .layout-content {
+        h2 {
+            color: #928f88;
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: 2.4em;
+            margin: 0.3em 0;
+        }
+        article {
+            h2 {
+                display: none;
+            }
+            p,.quickedit-field {
+                font-size: 1.2em;
+                font-weight: lighter;
+                line-height: 1.4em;
+            }
+            .quickedit-field {
+                a {
+                    text-transform: capitalize;
+                }
+            }
+            .links.inline {
+                .comment-add,
+                .comment-forbidden{
+                    display: none;
+                }
+                list-style: none;
+                width: 100%;
+                border-bottom: solid 1px;
+                height: 50px;
+                padding: 0;
+                li {
+                    float: left;
+                    a {
+                        text-decoration: none;
+                        color: #7a7367;
+                        background: #d4cfc6;
+                        padding: 1px 5px;
+                        margin: 0 10px 0 0;
+                        text-transform: uppercase;
+                        font-size: 15px;
+                    }
+                }
+                &:after {
+                    clear: both;
+                }
+            }
+            footer {
+                    margin-bottom: 10px;
+                }
+        }
+    }
+}

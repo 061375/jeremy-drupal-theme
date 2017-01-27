@@ -1,0 +1,50 @@
+{# add the page title or home to the container so pages and subpages can more easily have differnt look and feel using CSS #}
+{% if node.title.value %}{% set pagenow = node.title.value %}{% elseif page['#title'] %}{% set pagenow = page['#title'] %}{% endif %}
+{% if is_front %}{% set pagenow = 'home' %}{% endif %}
+<div class="layout-container template_test {{ pagenow|lower }}">
+<h1>GOT HERE</h1>
+  <header role="banner">
+     {{ page.header }} 
+    
+  </header>
+
+  {{ page.primary_menu }}
+  {#
+  {{ page.secondary_menu }}
+
+  {{ page.breadcrumb }}
+
+  {{ page.highlighted }}
+
+  {{ page.help }}
+  #}
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+    <div class="helloblock">
+      {{ page.hello_block }}
+    </div>
+    {% if page.sidebar %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+    {#
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+    #}
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}

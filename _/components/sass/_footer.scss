@@ -1,0 +1,29 @@
+footer {
+    &.footer {
+        background: #83807a;
+        .tools {
+            background: #aaa69f;
+            height: 95px;
+            padding: 6px 0;
+            box-sizing: border-box;
+            ul {
+                list-style: none;
+                width: 40%;
+                margin: auto;
+                li {
+                    float: left;
+                    margin: 5px;
+                    a {
+                        border: none;
+                    }
+                }
+            }
+        }
+        .copyright {
+            color: #fff;
+            font-size: 10px;
+            padding: 60px 0;
+            text-align: center;
+        }
+    }
+}
